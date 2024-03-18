@@ -1,0 +1,17 @@
+This program was made for a narrow application task in which it was necessary to cut seeds from an X-ray into separate files - images. 
+The main point of the entire task is to collect data for further training of the classifier, so that the code can not cut absolutely all the seeds, 
+but only those that the X-ray operator managed to place inside the frame. Seeds falling on or outside the frame will not be counted.
+
+
+An example of an x-ray will be attached. As already written, the program has a very narrow profile; it only works with specific images - x-rays. 
+Due to the peculiarities of the physics of the process, the seeds in such photographs are white. 
+If you have received an image of seeds, where after digital processing the seeds, on the contrary, are dark, 
+then you must manually invert the values for the image on which the frame and contours of the seeds are searched.
+
+
+By default, the path to the image and the path for saving images are specified manually. 
+The extension for X-ray images is also .tif. X-ray images must be in this extension and located in the same folder as the program file. 
+If they don’t, you will have to change it manually in the code. Folders for saving chopped seeds are created automatically.
+
+
+To chop seeds, you need to use a separate method for cutting - .chop(form), where form is the extension of the chopped files.
